@@ -47,8 +47,7 @@ class AutoLinkReplacer:
                         os.path.relpath(abs_link_url, abs_linker_url),
                         filename)
         if rel_link_url == '':
-            print('WARNING: AutoLinksPlugin unable to find ' + filename +
-                  ' in directory ' + self.base_docs_url)
+            # print('WARNING: AutoLinksPlugin unable to find ' + filename + ' in directory ' + self.base_docs_url)
             return match.group(0)
 
         # Construct the return link by replacing the filename with the relative path to the file
@@ -116,8 +115,7 @@ class RoamLinkReplacer:
                             # 但这个在处理index.md标题或者是被用作子文件夹默认主页的标题
                             #会存在问题，因为这2种情况下网址格式跟普通的不一样
             if rel_link_url == '':
-                print('WARNING: RoamLinksPlugin unable to find ' + filename +
-                      ' in directory ' + self.base_docs_url)
+                # print('WARNING: RoamLinksPlugin unable to find ' + filename + ' in directory ' + self.base_docs_url)
                 return whole_link
         else:
             rel_link_url = '#' + format_title
